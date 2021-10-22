@@ -1,0 +1,23 @@
+1. Вход в go to console
+2. navigation
+3. Compute Engine (В левой стране странице)
+что будем делать: Создадим робота (называется VM instances)
+4. create instances
+5. на поле name<писать имя как "stackoverflowapi">
+6. вивираем регион <мы не выбрали> Zone тоже
+7. Series = e2
+8. Mchine Type = e2-small (2, ...)
+9. CPU == Authomatik
+10. Boot (Меняем на Ubuntu и версию. желательно 18.04)
+11. Access sropes = Allow default access
+12. Firewall = 2/2
+13. заходим в management 
+    в Auth...
+    #! /bin/bash
+    apt-get update
+    apt-get install -y git
+    apt-get install -y vim
+    apt-get install -y python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
+    нажимаем create
+
+funicorn в req.txt и запускается не как runserver а gonicorn
